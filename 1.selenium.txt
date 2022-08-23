@@ -1,0 +1,97 @@
+selenium
+========
+
+* webdriver dependency - version 5.0.3
+* selenium dependeny - version 3.14.0
+* maven pulgin 3.0.0-M7
+
+concepts
+--------
+1.findElements
+2.textbox
+3.button
+4.dropdown(select)
+5.switchto alert
+6.swichto window
+7. switch to frames
+8.draganddrop(action)
+9.robot
+10.navigate
+11.web table
+
+
+#.firstSetup
+------------
+1. WebDriverManager.Chromedriver.Setup();
+2. WebDriver driver = new ChromeDriver();
+3. driver.get("  ");
+
+
+#.findElements
+---------------
+id, name, className, Xpath, css
+
+#.textbox-methods
+---------------
+sendkeys
+clear
+gettext
+getattribute
+
+#.button-methods
+---------------
+1.click
+2.getSize().height;
+  getSize().width;
+3.getCssValue(colour)
+4.getLocation.getX();
+  getLocation.getY();
+
+
+#.dropdown-method
+----------------
+ class- Select  -- Select s = new Select (dropdown- ref of dpdw );
+ method- s.selectByIndex();
+	s.selectByValue();
+	s.selectByVisibleText();
+
+		List<webElement> l = s.getOptions().
+		l.get(intex).getText().
+
+multibile select
+methods - getAllSelectedOption();
+	  getFirstSelectedOption();
+	  isMultible();
+
+	 deSelectByIndex();
+	 deSelectByValue();
+	 deSelectByVisibleText();
+
+#.alert-methods
+---------------
+Alert alert = driver.switchTo.alert().;
+alert.accept();
+
+confirm.dismiss();
+
+promd.sendkeys("").accetp();
+
+
+#.window handling/frame-methods
+------------------------
+m- getWindowHandle(); - parent
+m- getWindowHandles(); -all
+
+driver.switchTo().window(widow name)
+driver.swithTo().defaultContent(); coming parent window
+
+#.drag and drop
+---------------
+Actions actions = new Actions();
+actions.clickAndHold(from).moveToElement(to).release(to).bulid().perfome();
+or
+actions.dragAndDrop(source,des).build().perfome();
+
+#.webtable
+
+
